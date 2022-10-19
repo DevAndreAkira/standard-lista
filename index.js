@@ -28,7 +28,7 @@ form.onsubmit = function (event) {
   let textInput = document.getElementById("input-add").value;
   // let textValid = document.querySelector("#input-add").value.split();
 
-  if (textInput == '' || textInput == ' ' || textInput == '  ' || textInput == '   ') {
+  if (textInput == '' || textInput == ' ' || textInput == '  ' || textInput == '   ' || textInput.length > 35) {
     return
   }
   else {
