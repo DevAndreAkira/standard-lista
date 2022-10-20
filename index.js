@@ -1,5 +1,16 @@
 const form = document.querySelector("form");
 const ul = document.querySelector("ul");
+const colorGenerated = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
+const colorGenerated2 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
+var orient = Math.floor(Math.random() * (359 - 1) + 1)
+console.log(orient + " " + colorGenerated + " " + colorGenerated2);
+// let changeText = colorGenerated.split("");
+// alert(changeText);
+
+//& document.body.style.background = colorGenerated;
+document.body.style.backgroundImage = 'linear-gradient(' + orient + "deg" + ', ' + (colorGenerated.length === 6 ? colorGenerated + "1" : colorGenerated) + ', ' + (colorGenerated2.length === 6 ? colorGenerated2 + "1" : colorGenerated2) + ')'
+// document.querySelector("#add_item").style.background = colorGenerated;
+// document.querySelector("#add_item").style.color = ((changeText[1] < 6 ? "white" : (changeText[3] < 6 ? "white" : (changeText[5] < 6 ? "white" : 'black'))));
 
 // let arrayItem;
 // if (localStorage.getItem("itens")) {
