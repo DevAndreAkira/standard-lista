@@ -7,6 +7,11 @@ console.log(orient + " " + colorGenerated + " " + colorGenerated2);
 // let changeText = colorGenerated.split("");
 // alert(changeText);
 
+document.getElementById("input-add").oninput = function () {
+  let converter = 35 - document.getElementById("input-add").value.length;
+  document.querySelector("#countChars").textContent = converter;
+};
+
 //& document.body.style.background = colorGenerated;
 document.body.style.backgroundImage = 'linear-gradient(' + orient + "deg" + ', ' + (colorGenerated.length === 6 ? colorGenerated + "1" : colorGenerated) + ', ' + (colorGenerated2.length === 6 ? colorGenerated2 + "1" : colorGenerated2) + ')'
 // document.querySelector("#add_item").style.background = colorGenerated;
@@ -57,6 +62,7 @@ form.onsubmit = function (event) {
     li.querySelector("span").textContent = textInput;
   }
   document.getElementById("input-add").value = '';
+  document.querySelector("#countChars").textContent = 35;
 }
 
 //! REMOVE FUNCTION
