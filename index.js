@@ -1,19 +1,19 @@
 const form = document.querySelector("form");
 const ul = document.querySelector("ul");
-const colorGenerated = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
-const colorGenerated2 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
-var orient = Math.floor(Math.random() * (359 - 1) + 1)
-console.log(orient + " " + colorGenerated + " " + colorGenerated2);
+// const colorGenerated = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
+// const colorGenerated2 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
+// console.log(orient + " " + colorGenerated + " " + colorGenerated2);
+// var orient = Math.floor(Math.random() * (359 - 1) + 1)
 // let changeText = colorGenerated.split("");
 // alert(changeText);
 
 document.getElementById("input-add").oninput = function () {
-  let converter = 35 - document.getElementById("input-add").value.length;
+  let converter = 250 - document.getElementById("input-add").value.length;
   document.querySelector("#countChars").textContent = converter;
 };
 
 //& document.body.style.background = colorGenerated;
-document.body.style.backgroundImage = 'linear-gradient(' + orient + "deg" + ', ' + (colorGenerated.length === 6 ? colorGenerated + "1" : colorGenerated) + ', ' + (colorGenerated2.length === 6 ? colorGenerated2 + "1" : colorGenerated2) + ')'
+// document.body.style.backgroundImage = 'linear-gradient(' + orient + "deg" + ', ' + (colorGenerated.length === 6 ? colorGenerated + "1" : colorGenerated) + ', ' + (colorGenerated2.length === 6 ? colorGenerated2 + "1" : colorGenerated2) + ')'
 // document.querySelector("#add_item").style.background = colorGenerated;
 // document.querySelector("#add_item").style.color = ((changeText[1] < 6 ? "white" : (changeText[3] < 6 ? "white" : (changeText[5] < 6 ? "white" : 'black'))));
 
@@ -44,7 +44,7 @@ form.onsubmit = function (event) {
   let textInput = document.getElementById("input-add").value;
   // let textValid = document.querySelector("#input-add").value.split();
 
-  if (textInput == '' || textInput == ' ' || textInput == '  ' || textInput == '   ' || textInput.length > 35) {
+  if (textInput == '' || textInput == ' ' || textInput == '  ' || textInput == '   ' || textInput.length > 250) {
     return
   }
   else {
@@ -62,7 +62,7 @@ form.onsubmit = function (event) {
     li.querySelector("span").textContent = textInput;
   }
   document.getElementById("input-add").value = '';
-  document.querySelector("#countChars").textContent = 35;
+  document.querySelector("#countChars").textContent = 250;
 }
 
 //! REMOVE FUNCTION
